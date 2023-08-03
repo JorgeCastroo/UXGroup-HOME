@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+  --main-font-family: Poppins, sans-serif;
+  --background-primary-color: #000000;
+  --background-secondary-color: #FFFFFF;
+  --font-primary-color: #FFFFFF;
+  --font-secondary-color: #000000;
+
+  --color-primary-yellow: #FFD400;
+  --color-primary-orange: #FF792E;
+  --color-primary-green: #01E993;
+  --color-primary-blue: #0074FF;
+  --color-primary-purple: #744FCE;
+  --color-primary-red: #FF1700;
+}
+
+* {
+  font-family: var(--main-font-family);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+body {
+  margin-top: 80px;
+}
+
+form#conversion-form-formulario-provisorio-novo-site-ux {
+  margin: 0 auto;
+}

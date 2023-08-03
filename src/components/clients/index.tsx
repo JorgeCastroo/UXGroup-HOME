@@ -1,0 +1,245 @@
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import Image from 'next/image';
+import style from './style.module.scss';
+import { useState } from 'react';
+
+// image imports
+import ClientsImage from '@/assets/Clientes/Desktop - Clientes.png';
+import ClientAlexandre from '@/assets/Clientes/alexandre.png';
+import ClientCarrefour from '@/assets/Clientes/carrefour.png';
+import ClientLemon from '@/assets/Clientes/LogoClientlemon.png';
+import ClientKabum from '@/assets/Clientes/kabum.png';
+import ClientLemonBasic from '@/assets/Clientes/lemon.png';
+import ClientMultimoveis from '@/assets/Clientes/mm.png';
+import ClientPetlove from '@/assets/Clientes/petlove.png';
+import ClientShopee from '@/assets/Clientes/shopee.png';
+import ClientVeste from '@/assets/Clientes/vest.png';
+import ClientSalon from '@/assets/Clientes/salon.png';
+import ClientVia from '@/assets/Clientes/via-varejo.png';
+import LogoVesteClientes from '@/assets/Clientes/logo-veste-clientes.png';
+import LogoPetClientes from '@/assets/Clientes/logo-pet-cliente.png';
+
+const IMAGES = [
+  { img: ClientVia, alt: 'Cliente Via Varejo' },
+  { img: ClientCarrefour, alt: 'Cliente Carrefour' },
+  { img: ClientPetlove, alt: 'Cliente Petlove' },
+  { img: ClientShopee, alt: 'Cliente Shopee' },
+  { img: ClientKabum, alt: 'Cliente Kabum' },
+  { img: ClientMultimoveis, alt: 'Cliente Multimoveis' },
+  { img: ClientSalon, alt: 'Cliente Salon line' },
+  { img: ClientVeste, alt: 'Cliente Veste' },
+  { img: ClientLemonBasic, alt: 'Cliente Lemon Basic' },
+  { img: ClientAlexandre, alt: 'Cliente Alexandre' },
+];
+
+export function Clients() {
+  const [index, setIndex] = useState(0);
+  const [touchPosition, setTouchPosition] = useState<number | null>(null);
+  const length = 2;
+
+  const next = () => {
+    if (index < length - 1) {
+      setIndex(index + 1);
+    }
+  };
+
+  const prev = () => {
+    if (index > 0) {
+      setIndex(index - 1);
+    }
+  };
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchDown = e.touches[0].clientX;
+    setTouchPosition(touchDown);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    const touchDown = touchPosition;
+
+    if (touchDown === null) {
+      return;
+    }
+
+    const currentTouch = e.touches[0].clientX;
+    const diff = touchDown - currentTouch;
+
+    if (diff > 5) {
+      if (index < length - 1) {
+        next();
+      }
+    }
+
+    if (diff < -5) {
+      if (index > 0) {
+        prev();
+      }
+    }
+
+    setTouchPosition(null);
+  };
+  return (
+    <section className={style.container}>
+      <div className={style.division}>
+        <div className={style.left}>
+          <Image
+            src={ClientsImage}
+            alt="Fundo cinza e na frente há homem de pele negra e camisa branca utilizando um celular branco"
+          />
+        </div>
+        <div className={style.margin}>
+          <div className={style.right}>
+            <div className={style.titleBlock}>
+              <h2 className={style.title}>
+                Relatos de quem vive a experiência UX:
+              </h2>
+              <p className={style.subtitle}>
+                UX (User Experience), em português, experiência do usuário,
+                consiste na experiência gerada com as interações de um usuário
+                com determinada solução ou produto de uma marca.
+              </p>
+            </div>
+            <div className={style.carousel}>
+              <div
+                className={style.slider}
+                style={{ transform: `translateX(-${index * 100}%)` }}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+              >
+                <div className={style.slide}>
+                  <div className={style.control}>
+                    <button className={style.left} onClick={prev}>
+                      <FaArrowLeft size={14} />
+                    </button>
+                    <Image
+                      src={ClientLemon}
+                      width={208}
+                      height={208}
+                      alt="Logo Veste"
+                    />
+                    <button className={style.right} onClick={next}>
+                      <FaArrowRight size={14} />
+                    </button>
+                  </div>
+                  <div className={style.content}>
+                    <p className={style.quote}>
+                      “A UX é um parceiro fundamental para o nosso crescimento, 
+                      que entendeu todas as nossas necessidades e juntos estamos 
+                      criando um formato de trabalho que realmente agrega valor a 
+                      experiência das nossas clientes. Estamos recebendo vários elogios,
+                      tanto da entrega, como das respostas rápidas de retorno do atendimento.
+                      Estamos muito satisfeitos!”
+                    </p>
+                    <p className={style.author}>Samanta Piacini</p>
+                    <p className={style.company}>CEO Lemon Basics</p>
+                  </div>
+                </div>
+                <div className={style.slide}>
+                  <div className={style.control}>
+                    <button className={style.left} onClick={prev}>
+                      <FaArrowLeft size={14} />
+                    </button>
+                    <Image
+                      src={LogoVesteClientes}
+                      width={208}
+                      height={208}
+                      alt="Logo Veste"
+                    />
+                    <button className={style.right} onClick={next}>
+                      <FaArrowRight size={14} />
+                    </button>
+                  </div>
+                  <div className={style.content}>
+                    <p className={style.quote}>
+                      “Super parceria com a UX, muito bacana, que pra gente é
+                      muito importante pra Restoque, e a UX tem nos atendido de
+                      forma excelente. A equipe é voltada totalmente para o que
+                      a gente precisa na velocidade, no tempo e na qualidade do
+                      serviço que prestam.O time está de parabéns! Uma excelente
+                      parceria que estamos tendo.”
+                    </p>
+                    <p className={style.author}>Marcelo Rafael</p>
+                    <p className={style.company}>Veste</p>
+                  </div>
+                </div>
+
+                <div className={style.slide}>
+                  <div className={style.control}>
+                    <button className={style.left} onClick={prev}>
+                      <FaArrowLeft size={14} />
+                    </button>
+                    <Image
+                      src={LogoPetClientes}
+                      width={208}
+                      height={208}
+                      alt="Logo Pet Lovers"
+                    />
+                    <button className={style.right} onClick={next}>
+                      <FaArrowRight size={14} />
+                    </button>
+                  </div>
+                  <div className={style.content}>
+                    <p className={style.quote}>
+                      “Sinto-me honrado de fazer parte desta jornada que está
+                      apenas começando! Sendo parceiros de um time de
+                      profissionais super competentes como o time UX
+                      Fulfillment, tenho certeza que a petlove está em boas mãos
+                      e que seus clientes terão o mais alto nível de serviço,
+                      qualidade e agilidade para que juntos possamos tornar seus
+                      pets muito mais felizes e saudáveis.”
+                    </p>
+                    <p className={style.author}>Alvaro</p>
+                    <p className={style.company}>Petlove</p>
+                  </div>
+                </div>
+              </div>
+              <div className={style.indicators}>
+                <ul>
+                  <li>
+                    <button
+                      className={index === 0 ? style.active : ''}
+                      onClick={() => setIndex(0)}
+                    ></button>
+                  </li>
+                  <li>
+                    <button
+                      className={index === 1 ? style.active : ''}
+                      onClick={() => setIndex(1)}
+                    ></button>
+                  </li>
+                  <li>
+                    <button
+                      className={index === 2 ? style.active : ''}
+                      onClick={() => setIndex(2)}
+                    ></button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div className={style.titleBlock}>
+              <h2 className={style.title}>Alguns dos nossos cases:</h2>
+              <p className={style.subtitle}>
+                UX, pra nós, também significa Unique Experience, ou seja, uma
+                experiência única de soluções integradas de ponta a ponta, com
+                um único parceiro,
+              </p>
+            </div>
+
+            <div className={style.cards}>
+              {new Array(10).fill(0).map((_, index) => (
+                <div className={style.card} key={index}>
+                  <Image
+                    src={IMAGES[index].img}
+                    alt={IMAGES[index].alt}
+                    width={152}
+                    height={152}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

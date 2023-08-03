@@ -1,0 +1,219 @@
+.container {
+  background-color: #ededed;
+  padding-bottom: 91px;
+
+  .margin {
+    width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .titleBlock {
+    width: 321px;
+    color: var(--font-secondary-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0;
+
+    .title {
+      margin-top: 91px;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      letter-spacing: 0px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 100%;
+      margin: 0;
+      .title {
+        margin-top: 124px;
+        line-height: 56px;
+      }
+    }
+  }
+
+  .image {
+    display: none;
+    @media screen and (min-width: 1500px) {
+      // display: block;
+      background-size: cover;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  .galery {
+    margin-top: 36px;
+
+    .cards {
+      display: flex;
+      flex-direction: row;
+      overflow: auto;
+      white-space: nowrap;
+      background-color: inherit;
+      gap: 32px;
+
+      .card {
+        width: 321px;
+        text-decoration: none;
+        background: var(--background-secondary-color);
+        color: var(--font-secondary-color);
+        display: inline-flex;
+        white-space: normal;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+
+        .img {
+          box-shadow: 0px 3px 6px #00000029;
+
+          img {
+            object-fit: cover;
+          }
+        }
+
+        .content {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding-bottom: 1rem;
+        }
+
+        .title {
+          margin-top: 1.5rem;
+          font-weight: bold;
+
+          font-size: 1rem;
+          line-height: 1.5rem;
+        }
+
+        .text {
+          margin: 12px 0;
+          font: normal normal 300 14px/21px;
+        }
+
+        span {
+          color: var(--font-secondary-color);
+          font: normal normal 500 14px/21px;
+        }
+      }
+    }
+
+    .control {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 36px;
+      gap: 19px;
+
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+
+      span {
+        color: var(--font-primary-color);
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 21px;
+        visibility: hidden;
+      }
+
+      button {
+        height: 2rem;
+        width: 2rem;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        border: none;
+        background-color: #fff;
+        border-radius: 22px;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      .cards {
+        .card {
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .margin {
+      width: 90%;
+    }
+
+    .titleBlock {
+      width: 100%;
+      margin: 0;
+
+      .title {
+        margin-top: 124px;
+        line-height: 56px;
+      }
+    }
+
+    .galery {
+      .cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+
+        .card {
+          background: none;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          width: 100%;
+          gap: 1rem;
+          padding: 0;
+          max-width: 350px;
+
+
+          .title {
+            margin-top: 0;
+            color: var(--font-secondary-color);
+          }
+
+          .text,
+          a {
+            color: var(--font-secondary-color);
+            font-size: 14px;
+            line-height: 21px;
+          }
+
+          a {
+            font-weight: 500;
+          }
+
+          span {
+            color: var(--font-secondary-color);
+          }
+        }
+      }
+
+      .control {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

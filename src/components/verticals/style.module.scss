@@ -1,0 +1,497 @@
+.container {
+  background-color: var(--background-primary-color);
+  color: var(--font-primary-color);
+  padding-top: 80px;
+
+  .titleBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title {
+      max-width: 321px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    .subtitle {
+      width: 80%;
+      text-align: center;
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+  }
+
+  .carousel {
+    overflow: hidden;
+
+    .control {
+      margin-top: 36px;
+      position: relative;
+
+      .controlSlider {
+        white-space: nowrap;
+
+        .controlSlide {
+          white-space: normal;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 37px;
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            height: 29px;
+            width: 40%;
+            color: var(--font-primary-color);
+            border-radius: 0;
+            background-color: var(--background-primary-color);
+
+            &.colorOrange {
+              color: var(--color-primary-orange);
+              border: 1px solid var(--color-primary-orange);
+            }
+
+            &.colorRed {
+              color: var(--color-primary-red);
+              border: 1px solid var(--color-primary-red);
+            }
+
+            &.colorYellow {
+              color: var(--color-primary-yellow);
+              border: 1px solid var(--color-primary-yellow);
+            }
+
+            &.colorBlue {
+              color: var(--color-primary-blue);
+              border: 1px solid var(--color-primary-blue);
+            }
+
+            &.colorGreen {
+              color: var(--color-primary-green);
+              border: 1px solid var(--color-primary-green);
+            }
+
+            &.colorPurple {
+              color: var(--color-primary-purple);
+              border: 1px solid var(--color-primary-purple);
+            }
+          }
+        }
+      }
+
+      button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 33px;
+        height: 33px;
+        z-index: 10;
+        position: absolute;
+        background-color: var(--background-secondary-color);
+        box-shadow: 0px 3px 6px #00000029;
+        border-radius: 39px;
+        border: none;
+
+        &.left {
+          top: 0;
+          left: 10%;
+        }
+
+        &.right {
+          top: 0;
+          right: 10%;
+        }
+
+        svg {
+          color: var(--font-secondary-color);
+        }
+      }
+    }
+
+    .slider {
+      margin-top: 77px;
+      margin-bottom: 115px;
+      white-space: nowrap;
+      transition: ease 500ms;
+      max-width: 733px;
+
+      .slide {
+        transition-property: filter, transform;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+        display: inline-flex;
+        flex-direction: column;
+        height: 609px;
+        white-space: normal;
+        width: 80%;
+        padding: 36px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          background-color: #000;
+          opacity: 0.5;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: -1;
+        }
+
+        .content {
+          flex: 1;
+          margin-top: 36px;
+        }
+
+        .image {
+          width: 170px;
+          height: 50px;
+        }
+
+        &.active {
+          transform: scale(1.1);
+        }
+
+        &:not(.active) {
+          transform: scale(0.9);
+          filter: brightness(50%);
+        }
+
+        h3 {
+          font-size: 24px;
+          line-height: 35px;
+          font-weight: bold;
+        }
+
+        .description {
+          font-size: 14px;
+          line-height: 21px;
+          font-weight: 300;
+          margin-top: 0.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+
+          a {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 40px;
+            border: none;
+            background-color: var(--background-secondary-color);
+            color: var(--font-secondary-color);
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 200px;
+            text-align: center;
+            font: normal normal normal 16px/25px;
+            letter-spacing: 0px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: var(--background-primary-color);
+              color: var(--font-primary-color);
+              border: 1px solid var(--font-primary-color);
+            }
+
+            &.colorOrange {
+              background-color: var(--color-primary-orange);
+              color: var(--font-primary-color);
+
+              &:hover {
+                background-color: var(--background-secondary-color);
+                color: var(--color-primary-orange);
+                border: 1px solid var(--color-primary-orange);
+              }
+            }
+
+            &.colorBlue {
+              background-color: var(--color-primary-blue);
+              color: var(--font-primary-color);
+
+              &:hover {
+                background-color: var(--background-secondary-color);
+                color: var(--color-primary-blue);
+                border: 1px solid var(--color-primary-blue);
+              }
+            }
+
+            &.colorGreen {
+              background-color: var(--color-primary-green);
+              color: var(--font-primary-color);
+
+              &:hover {
+                background-color: var(--background-secondary-color);
+                color: var(--color-primary-green);
+                border: 1px solid var(--color-primary-green);
+              }
+            }
+
+            &.colorPurple {
+              background-color: var(--color-primary-purple);
+              color: var(--font-primary-color);
+
+              &:hover {
+                background-color: var(--background-secondary-color);
+                color: var(--color-primary-purple);
+                border: 1px solid var(--color-primary-purple);
+              }
+            }
+
+            &.colorYellow {
+              background-color: var(--color-primary-yellow);
+              color: var(--font-primary-color);
+
+              &:hover {
+                background-color: var(--background-secondary-color);
+                color: var(--color-primary-yellow);
+                border: 1px solid var(--color-primary-yellow);
+              }
+            }
+
+            &.colorRed {
+              background-color: var(--color-primary-red);
+              color: var(--font-primary-color);
+
+              &:hover {
+                background-color: var(--background-secondary-color);
+                color: var(--color-primary-red);
+                border: 1px solid var(--color-primary-red);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .indicators {
+    margin-top: 36px;
+    margin-bottom: 80px;
+    display: none;
+    justify-content: center;
+
+    ul {
+      display: flex;
+      gap: 0.5rem;
+
+      li {
+        display: block;
+
+        button {
+          height: 1rem;
+          width: 1rem;
+          border-radius: 0;
+          background: #FFFFFF 0% 0% no-repeat padding-box;
+          border: none;
+
+          &.active {
+            background: #868686 0% 0% no-repeat padding-box;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    padding: 0;
+    background-color: var(--background-secondary-color);
+    color: var(--font-secondary-color);
+
+    .titleBlock {
+      .title {
+        line-height: 56px;
+      }
+    }
+
+    .carousel {
+      .control {
+        .controlSlider {
+          white-space: normal;
+          display: flex;
+          justify-content: center;
+          gap: 0.5rem;
+
+          .controlSlide {
+            display: flex;
+            width: 167px;
+
+            button {
+              width: 100%;
+              position: static;
+              cursor: pointer;
+
+              &.colorOrange {
+                background-color: var(--font-primary-color);
+                color: var(--color-primary-orange);
+
+                &.active {
+                  background-color: var(--color-primary-orange);
+                  color: var(--font-primary-color);
+                }
+
+                &:hover {
+                  background-color: var(--color-primary-orange);
+                  color: var(--font-primary-color);
+                }
+              }
+
+              &.colorBlue {
+                background-color: var(--font-primary-color);
+                color: var(--color-primary-blue);
+
+                &.active {
+                  background-color: var(--color-primary-blue);
+                  color: var(--font-primary-color);
+                }
+
+                &:hover {
+                  background-color: var(--color-primary-blue);
+                  color: var(--font-primary-color);
+                }
+              }
+
+              &.colorGreen {
+                background-color: var(--font-primary-color);
+                color: var(--color-primary-green);
+
+                &.active {
+                  background-color: var(--color-primary-green);
+                  color: var(--font-primary-color);
+                }
+
+                &:hover {
+                  background-color: var(--color-primary-green);
+                  color: var(--font-primary-color);
+                }
+              }
+
+              &.colorPurple {
+                background-color: var(--font-primary-color);
+                color: var(--color-primary-purple);
+
+                &.active {
+                  background-color: var(--color-primary-purple);
+                  color: var(--font-primary-color);
+                }
+
+                &:hover {
+                  background-color: var(--color-primary-purple);
+                  color: var(--font-primary-color);
+                }
+              }
+
+              &.colorYellow {
+                background-color: var(--font-primary-color);
+                color: var(--color-primary-yellow);
+
+                &.active {
+                  background-color: var(--color-primary-yellow);
+                  color: var(--font-primary-color);
+                }
+
+                &:hover {
+                  background-color: var(--color-primary-yellow);
+                  color: var(--font-primary-color);
+                }
+              }
+
+              &.colorRed {
+                background-color: var(--font-primary-color);
+                color: var(--color-primary-red);
+
+                &.active {
+                  background-color: var(--color-primary-red);
+                  color: var(--font-primary-color);
+                }
+
+                &:hover {
+                  background-color: var(--color-primary-red);
+                  color: var(--font-primary-color);
+                }
+              }
+            }
+          }
+        }
+
+        button {
+          display: none;
+        }
+      }
+
+      .slider {
+        .slide {
+          color: var(--font-primary-color);
+          width: 793px;
+          height: 449px;
+          padding: 86px;
+
+          .content {
+          }
+
+          .image {
+          }
+
+          &.active {
+            transform: scale(1.0);
+          }
+
+          &:not(.active) {
+            z-index: -1;
+            filter: brightness(50%);
+          }
+
+          h3 { }
+
+          .description {
+
+          }
+
+          .buttons {
+            flex-direction: row;
+
+            button {
+              width: initial;
+              padding: 0.5rem 2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    margin-top: 80px;
+
+    .carousel {
+      max-width: 1440px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .slider {
+        .slide {
+        }
+      }
+    }
+  }
+}

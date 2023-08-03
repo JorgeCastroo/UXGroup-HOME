@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  padding: 74px 0;
+
+  .margin {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1440px;
+  }
+  .titleBlock {
+    margin-bottom: 1rem;
+    .title {
+      font-weight: bold;
+      font-size: 2.5rem;
+      line-height: 3.125rem;
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  p {
+    padding: 0.5rem 0;
+    font-size: 0.75rem;
+    line-height: 1.325rem;
+  }
+
+  h2 {
+    font-size: 0.75rem;
+    line-height: 1.325rem;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+
+  h3 {
+    font-size: 0.75rem;
+    line-height: 1.325rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  span {
+    font-size: 0.75rem;
+    line-height: 1.325rem;
+  }
+}

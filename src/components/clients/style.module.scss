@@ -1,0 +1,269 @@
+.container {
+  padding-top: 91px;
+
+  * {
+    color: var(--font-secondary-color);
+  }
+
+  .left {
+    display: none;
+
+    @media screen and (min-width: 1480px) {
+      display: block;
+      width: 378px;
+      img {
+        height: 100%;
+        background-size: contain;
+      }
+    }
+  }
+
+  .right {
+    .titleBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 auto;
+      width: 80%;
+
+      .title {
+        font-weight: bold;
+        font-size: 2.25rem;
+        line-height: 3.4375rem;
+      }
+
+      .subtitle {
+        font-size: 14px;
+        line-height: 21px;
+        font-weight: 300;
+      }
+    }
+
+    .carousel {
+      overflow-x: hidden;
+      margin-top: 36px;
+
+      .slider {
+        white-space: nowrap;
+        transition: transform ease 0.5s;
+
+        .slide {
+          white-space: normal;
+          display: inline-flex;
+          flex-direction: column;
+          width: 100%;
+          align-items: center;
+          justify-content: center;
+
+          .control {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+          }
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border: none;
+
+            &.left, &.right {
+              background-color: var(--background-primary-color);
+
+              svg {
+                fill: var(--font-primary-color);
+              }
+            }
+
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 39px;
+          }
+
+          .content {
+            margin-top: 32px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 322px;
+
+            .quote {
+              font-size: 16px;
+              font-weight: bold;
+              line-height: 21px;
+              text-align: center;
+              margin-bottom: 8px;
+            }
+
+            .author, .company {
+              font-size: 14px;
+              line-height: 21px;
+              text-align: center;
+            }
+
+            .company {
+              margin-top: 4px;
+              font-weight: 300;
+            }
+          }
+        }
+      }
+
+
+      .indicators {
+        margin-top: 36px;
+        margin-bottom: 52px;
+        display: flex;
+        justify-content: center;
+
+        ul {
+          display: flex;
+          gap: 0.5rem;
+
+          li {
+            display: block;
+
+            button {
+              height: 1rem;
+              width: 1rem;
+              border-radius: 0;
+              background: #E6E6E6;
+              border: none;
+
+              &.active {
+                background: var(--background-primary-color);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .cards {
+      width: 80%;
+      margin: 36px auto;
+      display: flex;
+      overflow-x: auto;
+      gap: 32px;
+      padding: 3px;
+      margin-bottom: 79px;
+
+      .card {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 3px 6px #00000029;
+      }
+    }
+  }
+
+  .division {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    display: flex;
+    padding: 0;
+
+    .right {
+      flex: 1;
+      margin-top: 80px;
+
+      .cards {
+        width: 100%;
+      }
+
+      .titleBlock {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0;
+
+        width: 100%;
+        .title {
+          line-height: 56px;
+          max-width: 475px;
+        }
+
+        .subtitle {
+          text-align: right;
+          margin-top: 13px;
+          max-width: 321px;
+        }
+      }
+
+      .carousel {
+        .slider {
+          .slide {
+            .control {
+              button {
+                display: none;
+              }
+
+            }
+
+            .content {
+              max-width: 80%;
+
+              .quote {
+                font-size: 24px;
+                font-weight: bold;
+                line-height: 35px;
+              }
+
+              .author, .company {
+                font-size: 20px;
+                line-height: 30px;
+              }
+            }
+          }
+        }
+
+        .indicators {
+          margin-top: 1rem;
+          margin-bottom: 141px;
+        }
+      }
+
+      .cards {
+        .card {
+          display: flex;
+        }
+      }
+    }
+
+    .margin {
+      margin: 0 auto;
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    .right {
+      .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1480px) {
+  .container {
+    .margin {
+      width: 60%;
+    }
+
+    .division {
+      display: flex;
+      flex-direction: row;
+      height: 100%;
+    }
+  }
+}
