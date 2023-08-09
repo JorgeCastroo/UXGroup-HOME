@@ -6,11 +6,11 @@ import { useWindowSize } from '@/hooks/use-window-size';
 // import images
 import ESGFolha from '@/assets/ESG/Desktop/folha.png';
 import ESGLogo from '@/assets/ESG/Desktop/logo-3pilares.gif';
-import ESGMaos from '@/assets/ESG/Desktop/mãos.png';
-import ESGQuebraCabeca from '@/assets/ESG/Desktop/quebra-cabeça.png';
-import Inovacao from '@/assets/ESG/Desktop/Desktop ESG - Inovação.png';
-import Integracao from '@/assets/ESG/Desktop/Desktop ESG - Integração.png';
-import Responsabilidade from '@/assets/ESG/Desktop/Desktop ESG - Responsabilidade.png';
+import ESGMaos from '@/assets/ESG/Desktop/maos.png';
+import ESGQuebraCabeca from '@/assets/ESG/Desktop/quebra-cabeca.png';
+import Inovacao from '@/assets/ESG/Desktop/Desktop-ESG-Inovacao.png';
+import Integracao from '@/assets/ESG/Desktop/Desktop-ESG-Integracao.png';
+import Responsabilidade from '@/assets/ESG/Desktop/Desktop-ESG-Responsabilidade.png';
 
 export const ESGDesktop = () => {
   const [overlapIndex, setOverlapIndex] = useState(0);

@@ -9,7 +9,7 @@ import PetLoveEleva from '@/assets/UX-na-midia/petlove-eleva-performance-logisti
 import Chatbots from '@/assets/UX-na-midia/como-os-chatbots-podem-apoiar-a-logistica-mundo-logistica.png';
 import Fulfillment from '@/assets/UX-na-midia/fulfillment-por-que-interessa-aos-pequenos-e-grandes.png';
 import Estrategias from '@/assets/UX-na-midia/estrategias-para-ser-diferente-aos-olhos-da-geracao-z-clientesa.png';
-import Amazon from '@/assets/UX-na-midia/ux-group-sela-acordo-com-amazon-para-integrar-o-grupo-de-parceiros-spn--mundo-do-marketing.png';
+import Amazon from '@/assets/UX-na-midia/ux-group-sela-acordo-com-amazon-para-integrar-o-grupo-de-parceiros-spn - mundo-do-marketing.png';
 import Gestao from '@/assets/UX-na-midia/ux-group-desenvolve-sistema-de-gestao-de-parceiros-e-aprimora-operacionalizacao-das-entregas.png';
 import {useEffect, useRef} from "react";
 

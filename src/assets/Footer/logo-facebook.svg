@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
-  <g id="Grupo_254" data-name="Grupo 254" transform="translate(6688 -17789.001)">
-    <rect id="Retângulo_104" data-name="Retângulo 104" width="30" height="30" transform="translate(-6688 17789)" fill="#fff"/>
-    <path id="Icon_awesome-facebook-f" data-name="Icon awesome-facebook-f" d="M10.618,10.125l.5-3.258H7.992V4.753a1.629,1.629,0,0,1,1.837-1.76H11.25V.22A17.329,17.329,0,0,0,8.728,0C6.153,0,4.471,1.56,4.471,4.385V6.867H1.609v3.258H4.471V18H7.992V10.125Z" transform="translate(-6679.43 17795)"/>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30"><g data-name="Grupo 254"><path fill="#fff" d="M0-.001h30v30H0z" data-name="Retângulo 104"/><path d="m19.188 16.124.5-3.258h-3.126v-2.114a1.629 1.629 0 0 1 1.837-1.76h1.421V6.219a17.329 17.329 0 0 0-2.522-.22c-2.575 0-4.257 1.56-4.257 4.385v2.482h-2.862v3.258h2.862v7.875h3.521v-7.875Z" data-name="Icon awesome-facebook-f"/></g></svg>

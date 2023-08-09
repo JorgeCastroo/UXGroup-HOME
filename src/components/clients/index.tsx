@@ -4,7 +4,7 @@ import style from './style.module.scss';
 import { useState } from 'react';
 
 // image imports
-import ClientsImage from '@/assets/Clientes/Desktop - Clientes.png';
+import ClientsImage from '@/assets/Clientes/banner-clientes.gif';
 import ClientAlexandre from '@/assets/Clientes/alexandre.png';
 import ClientCarrefour from '@/assets/Clientes/carrefour.png';
 import ClientLemon from '@/assets/Clientes/LogoClientlemon.png';
@@ -113,8 +113,8 @@ export function Clients() {
                     </button>
                     <Image
                       src={ClientLemon}
-                      width={208}
-                      height={208}
+                      width={180}
+                      height={178}
                       alt="Logo Veste"
                     />
                     <button className={style.right} onClick={next}>
@@ -141,8 +141,8 @@ export function Clients() {
                     </button>
                     <Image
                       src={LogoVesteClientes}
-                      width={208}
-                      height={208}
+                      width={180}
+                      height={178}
                       alt="Logo Veste"
                     />
                     <button className={style.right} onClick={next}>
@@ -155,7 +155,7 @@ export function Clients() {
                       muito importante pra Restoque, e a UX tem nos atendido de
                       forma excelente. A equipe é voltada totalmente para o que
                       a gente precisa na velocidade, no tempo e na qualidade do
-                      serviço que prestam.O time está de parabéns! Uma excelente
+                      serviço que prestam.  O time está de parabéns! Uma excelente
                       parceria que estamos tendo.”
                     </p>
                     <p className={style.author}>Marcelo Rafael</p>
@@ -170,8 +170,8 @@ export function Clients() {
                     </button>
                     <Image
                       src={LogoPetClientes}
-                      width={208}
-                      height={208}
+                      width={180}
+                      height={178}
                       alt="Logo Pet Lovers"
                     />
                     <button className={style.right} onClick={next}>

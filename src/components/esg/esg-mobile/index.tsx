@@ -4,13 +4,13 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 // image imports
-import InovacaoImage from '@/assets/ESG/Mobile/Mobile-ESG---Inovação.gif';
-import IntegracaoImage from '@/assets/ESG/Mobile/Mobile-ESG---Integração.gif';
-import ResponsabilidadeImage from '@/assets/ESG/Mobile/Mobile-ESG---Responsabilidade.gif';
+import InovacaoImage from '@/assets/ESG/Mobile/Mobile-ESG--Inovacao.gif';
+import IntegracaoImage from '@/assets/ESG/Mobile/Mobile-ESG--Integracao.gif';
+import ResponsabilidadeImage from '@/assets/ESG/Mobile/Mobile-ESG--Responsabilidade.gif';
 
 import LeafImage from '@/assets/ESG/Mobile/folha.png';
-import MaosImage from '@/assets/ESG/Mobile/mãos.png';
-import QuebraCabecaImage from '@/assets/ESG/Mobile/quebra-cabeça.png';
+import MaosImage from '@/assets/ESG/Mobile/maos.png';
+import QuebraCabecaImage from '@/assets/ESG/Mobile/quebra-cabeca.png';
 
 export function ESGMobile() {
   const [index, setIndex] = useState(0);

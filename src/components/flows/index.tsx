@@ -5,20 +5,20 @@ import Image from 'next/image';
 import { useWindowSize } from '@/hooks/use-window-size';
 
 // import images
-import PlanejamentoMiniImage from '@/assets/Fluxo-Desktop/Desktop sessão fluxo - PLANEJAMENTO MINI.png';
-import VendasMiniImage from '@/assets/Fluxo-Desktop/Desktop sessão fluxo - VENDAS MINI.png';
-import EntregaMiniImage from '@/assets/Fluxo-Desktop/Desktop sessão fluxo - ENTREGAS MINI.png';
-import AnaliseMiniImage from '@/assets/Fluxo-Desktop/Desktop sessão fluxo - ANÁLISE MINI.png';
+import PlanejamentoMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-PLANEJAMENTO-MINI.png';
+import VendasMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-VENDAS-MINI.png';
+import EntregaMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-ENTREGAS-MINI.png';
+import AnaliseMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-VENDAS-MINI.png'; 
 
-import PlanejamentoImage from '@/assets/Fluxo-Desktop/Desktop sessão fluxo - PLANEJAMENTO.png';
-import VendasImage from '@/assets/Fluxo-Desktop/Desktop sessão fluxo - VENDAS.png';
-import EntregaImage from '@/assets/Fluxo-Desktop/Desktop sessão fluxo - ENTREGAS.png';
-import AnaliseImage from '@/assets/Fluxo-Desktop/Desktop sessão fluxo - ANÁLISE.png';
+import PlanejamentoImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-PLANEJAMENTO.png';
+import VendasImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-VENDAS.png';
+import EntregaImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-ENTREGAS.png';
+import AnaliseImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-ANALISE.png';
 
-import PlanejamentoImageMobile from '@/assets/Fluxo-Mobile/Mobile sessão fluxo - PLANEJAMENTO.png';
-import VendasImageMobile from '@/assets/Fluxo-Mobile/Mobile sessão fluxo - VENDAS.png';
-import EntregaImageMobile from '@/assets/Fluxo-Mobile/Mobile sessão fluxo - ENTREGAS.png';
-import AnaliseImageMobile from '@/assets/Fluxo-Mobile/Mobile sessão fluxo - ANÁLISE.png';
+import PlanejamentoImageMobile from '@/assets/Fluxo-Mobile/Mobile-sessao-fluxo-PLANEJAMENTO.png';
+import VendasImageMobile from '@/assets/Fluxo-Mobile/Mobile-sessao-fluxo-VENDAS.png';
+import EntregaImageMobile from '@/assets/Fluxo-Mobile/Mobile-sessao-fluxo-ENTREGAS.png';
+import AnaliseImageMobile from '@/assets/Fluxo-Mobile/Mobile-sessao-fluxo-ANALISE.png';
 
 const IMAGESINORDER = [
   {
@@ -277,8 +277,7 @@ export function Flows() {
               onClick={() => setCurrent(4)}
             >
               04
-            </li>
-            
+            </li>  
           </ul>
         )}
       </div>
