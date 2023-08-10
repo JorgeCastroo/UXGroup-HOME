@@ -32,10 +32,26 @@ const IMAGES = [
   { img: ClientAlexandre, alt: 'Cliente Alexandre' },
 ];
 
+const VIDEOS = [
+  "https://www.youtube.com/embed/ol6t0mJNRU8",
+  "https://www.youtube.com/embed/Qie6x7vB2k8",
+  "https://www.youtube.com/embed/_XEjiXn8vQ0",
+];
+
 export function Clients() {
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(1);
   const [touchPosition, setTouchPosition] = useState<number | null>(null);
-  const length = 2;
+  const length = 1;
+
+  const [videoIndex, setVideoIndex] = useState(0);
+
+  const nextVideo = () => {
+    setVideoIndex((prevIndex) => (prevIndex + 1) % VIDEOS.length);
+  };
+
+  const prevVideo = () => {
+    setVideoIndex((prevIndex) => (prevIndex - 1 + VIDEOS.length) % VIDEOS.length);
+  };
 
   const next = () => {
     if (index < length - 1) {
@@ -107,32 +123,6 @@ export function Clients() {
                 onTouchMove={handleTouchMove}
               >
                 <div className={style.slide}>
-                  <div className={style.control}>
-                    <button className={style.left} onClick={prev}>
-                      <FaArrowLeft size={14} />
-                    </button>
-                    <Image
-                      src={ClientLemon}
-                      width={180}
-                      height={178}
-                      alt="Logo Veste"
-                    />
-                    <button className={style.right} onClick={next}>
-                      <FaArrowRight size={14} />
-                    </button>
-                  </div>
-                  <div className={style.content}>
-                    <p className={style.quote}>
-                      “A UX é um parceiro fundamental para o nosso crescimento, 
-                      que entendeu todas as nossas necessidades e juntos estamos 
-                      criando um formato de trabalho que realmente agrega valor a 
-                      experiência das nossas clientes. Estamos recebendo vários elogios,
-                      tanto da entrega, como das respostas rápidas de retorno do atendimento.
-                      Estamos muito satisfeitos!”
-                    </p>
-                    <p className={style.author}>Samanta Piacini</p>
-                    <p className={style.company}>CEO Lemon Basics</p>
-                  </div>
                 </div>
                 <div className={style.slide}>
                   <div className={style.control}>
@@ -197,31 +187,31 @@ export function Clients() {
                 <ul>
                   <li>
                     <button
-                      className={index === 0 ? style.active : ''}
-                      onClick={() => setIndex(0)}
-                    ></button>
-                  </li>
-                  <li>
-                    <button
                       className={index === 1 ? style.active : ''}
                       onClick={() => setIndex(1)}
                     ></button>
                   </li>
                   <li>
                     <button
-                      className={index === 2 ? style.active : ''}
-                      onClick={() => setIndex(2)}
+                      className={index === 2? style.active : ''}
+                      onClick={() => setIndex(2 )}
                     ></button>
                   </li>
                 </ul>
               </div>
             </div>
+            <div className={style.boxVideos}>
+              <h2 className={style.titleVideos}>Um pouco mais dos nossos parceiros:</h2>
+              <div className={style.videos}>
+                <iframe className={style.iframe} width="400" height="220" src="https://www.youtube.com/embed/ol6t0mJNRU8" title="Depoimento Lemon Basics" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+                <iframe className={style.iframe}  width="400" height="220" src="https://www.youtube.com/embed/Qie6x7vB2k8" title="Depoimento Carrefour" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" ></iframe>
+                <iframe className={style.iframe}  width="400" height="220" src="https://www.youtube.com/embed/_XEjiXn8vQ0" title="Depoimento Kabum" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
+              </div>
+            </div>
             <div className={style.titleBlock}>
               <h2 className={style.title}>Alguns dos nossos cases:</h2>
               <p className={style.subtitle}>
-                UX, pra nós, também significa Unique Experience, ou seja, uma
-                experiência única de soluções integradas de ponta a ponta, com
-                um único parceiro,
+              UX, pra nós, também significa Unique Experience, ou seja, uma experiência única com as soluções integradas que geram valor ao negócio.
               </p>
             </div>
 

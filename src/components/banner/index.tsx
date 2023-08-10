@@ -21,46 +21,46 @@ export function Banner() {
     },
     {
     id: 1,
-    title: 'Inovações que transformam a venda digital.',
+    title: 'Melhore a eficiência logística do seu e-commerce.',
     description:
-      'O seu parceiro Full Commerce com tecnologias e operações próprias.',
-    link: 'Saiba o que é full commerce',
-    href: '#flows',
+      'Tenha a sua operação de Fulfillment e Delivery 100% integradas.',
+    link: 'Saiba mais',
+    href: '#verticals',
     blocked: false,
     target: '_self',
     image: {
-      desktop: '/Site%20UX%20Group/banners/desktop/slide-1.gif',
-      mobile: '/Site%20UX%20Group/banners/mobile/slide-1.gif',
+      desktop: 'https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-2-1440x440-1.png',
+      mobile: 'https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-2-1440x440-1.png',
     },
   },
     {
       id: 2,
       title:
-        'Entenda cada etapa e solução necessária para uma experiência completa do seu cliente.',
+        'Reduza a pegada de carbono das suas vendas digitais.',
       description:
-        'A UX possui soluções integradas de ponta a ponta para que o gestor de um e-commerce converse com um só parceiro.',
-      link: 'Conheça as soluções',
-      target: '_self',
-      href: '#verticals',
-      blocked: false,
-      image: {
-        desktop: '/Site%20UX%20Group/banners/desktop/slide-2.gif',
-        mobile: '/Site%20UX%20Group/banners/mobile/slide-2.gif',
-      },
-    },
-    {
-      id: 3,
-      title:
-        'Saiba como a UX pode aplicar práticas ESG em suas vendas e aproximar sua loja do público do presente e do futuro.',
-      description:
-        'A tecnologia apoiando a operação para melhores práticas socioambientais e de gestão.',
+        'Sua operação logística 100% compensada de carbono sem investimentos em ativos.',
       link: 'Saiba mais',
       target: '_blank',
       href: 'https://esg.uxgroup.com.br/',
       blocked: false,
       image: {
-        desktop: '/Site%20UX%20Group/banners/desktop/slide-4.gif',
-        mobile: '/Site%20UX%20Group/banners/mobile/slide-4.gif',
+        desktop: 'https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-3-1440x440-1.png',
+        mobile: 'https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-3-1440x440-1.png',
+      },
+    },
+    {
+      id: 3,
+      title:
+        'Reduza seus gastos com SAC através da comunicação com o seu cliente.',
+      description:
+        'Ofereça acompanhamento em tempo real e autoatendimento 24h.',
+      link: 'Saiba mais',
+      target: '_blank',
+      href: 'https://ondetah.com.br/',
+      blocked: false,
+      image: {
+        desktop: 'https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-4-1440x440-1.png',
+        mobile: 'https://uxsolutions.com.br/wp-content/uploads/2023/06/Banner-4-1440x440-1.png',
       },
     },
   ];

@@ -22,9 +22,7 @@ const IMAGES = [
   {
     img: FulfillmentImage,
     href: 'https://uxff.com.br/',
-    alt: 'UX Fulfillment',
-    logoImg: UXFulfillmentLogo,
-    title: 'EXCELÊNCIA NA GESTÃO DE OPERAÇÕES.',
+    title: 'Excelência na gestão de operações.',
     description:
       'A UX possui know how e estruturas próprias localizadas em regiões estratégicas para oferecer um serviço de armazenagem e movimentação de pedidos de forma ágil, permitindo não só o controle, como também um melhor prazo para entregas.',
     buttons: [
@@ -38,7 +36,7 @@ const IMAGES = [
     logoImg: UXSolutionsLogo,
     alt: 'UX Solutions',
     href: 'https://uxsolutions.com.br/',
-    title: 'TECNOLOGIA PARA GESTÃO LOGÍSTICA.',
+    title: 'Tecnologia para gestão logística.',
     description:
       'Toda a tecnologia necessária para gerenciar a logística de uma operação de e-commerce. A UX, como diferencial, possui as soluções de TMS embarcador, TMS transportador, WMS e aplicativos desenvolvidos dentro de casa, com o objetivo de oferecer uma experiência única de gestão ao parceiro.',
     buttons: [
@@ -52,7 +50,7 @@ const IMAGES = [
     logoImg: UXConnectLogo,
     alt: 'UX Connect',
     href: 'https://uxconnect.com.br/',
-    title: 'EXPERIÊNCIA  INTEGRADA NA GESTÃO  DO CLIENTE.',
+    title: 'Experiência integrada na gestão do cliente.',
     description:
       'A experiência do usuário ao longo da compra e da entrega são dois fatores essenciais para a retenção e atração de clientes, por isso a UX desenvolveu ferramentas que permitem o consumidor a ter informação em tempo real sobre seus pedidos com a possibilidade de interagir com os agentes responsáveis por sua entrega.',
     buttons: [
@@ -65,7 +63,7 @@ const IMAGES = [
     img: DeliveryImage,
     logoImg: UXDeliveryLogo,
     alt: 'UX Delivery',
-    title: 'INOVAÇÃO NA GESTÃO DE TRANSPORTES.',
+    title: 'Inovação na gestão de transportes.',
     href: 'https://uxdelivery.com.br/',
     description:
       'A UX entende que o transporte pode ser um grande diferencial como etapa final deste processo. Por isso a UX investe em soluções que irão transformar a experiência de compra com tecnologia, performance e preocupação com o meio ambiente. Toda entrega UX Delivery é livre de emissão de CO².',
@@ -156,7 +154,7 @@ export function Verticals() {
                   index === 0 ? style.active : ''
                 }`}
               >
-                ARMAZENAR
+                Fulfillment 
               </button>
             </div>
             <div className={style.controlSlide}>
@@ -166,7 +164,7 @@ export function Verticals() {
                   index === 1 ? style.active : ''
                 }`}
               >
-                GERIR
+                Tecnologia
               </button>
             </div>
             <div className={style.controlSlide}>
@@ -176,7 +174,7 @@ export function Verticals() {
                   index === 2 ? style.active : ''
                 }`}
               >
-                COMUNICAR
+                Experiência
               </button>
             </div>
             <div className={style.controlSlide}>
@@ -186,7 +184,7 @@ export function Verticals() {
                   index === 3 ? style.active : ''
                 }`}
               >
-                ENTREGAR
+                Entrega
               </button>
             </div>
           </div>
@@ -223,23 +221,16 @@ export function Verticals() {
                 zIndex: index === idx ? 0 : -Math.abs(index - idx),
               }}
             >
-              <div className={style.image}>
-                <Image
-                  src={IMAGES[idx].logoImg}
-                  alt={IMAGES[idx].alt}
-                  width={idx === 2  ? 170 : 170}
-                  height={50}
-                />
-              </div>
               <div className={style.content}>
                 <h3>{IMAGES[idx].title}</h3>
                 <p className={style.description}>{IMAGES[idx].description}</p>
               </div>
               <div className={style.buttons}>
-                <a href="#contact">crie um case</a>
                 <a href={IMAGES[idx].href} target="_blank" className={style[`color${IMAGES[idx].color}`]}>
                   acessar o site
                 </a>
+                <a href="https://calendly.com/natielen-campos/ux-group-voce?month=2023-08">agende uma reunião</a>
+                
               </div>
             </div>
           ))}
