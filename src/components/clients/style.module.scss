@@ -25,15 +25,16 @@
       align-items: flex-start;
       margin: 0 auto;
       width: 80%;
+      gap: 20px;
 
       .title {
         font-weight: bold;
         font-size: 2.25rem;
-        line-height: 3.4375rem;
+        line-height: 2.5rem;
       }
 
       .subtitle {
-        font-size: 14px;
+        font-size: 1rem;
         line-height: 21px;
         font-weight: 300;
       }
