@@ -141,15 +141,6 @@ export function HeaderMobile() {
                       Acessar <span>&gt;</span>
                     </a>
                   </div>
-                  <div className={style.vertical}>
-                    <h2>
-                      UX <span className={style.colorRed}>DELIVERY</span>
-                    </h2>
-                    <p>INOVAÇÃO NA GESTÃO DE TRANSPORTES.</p>
-                    <a href="https://uxdelivery.com.br/" target="_blank">
-                      Acessar <span>&gt;</span>
-                    </a>
-                  </div>
                 </div>
                 <button className={style.buttonRight} onClick={scrollToRight}>
                   <FaArrowRight size={9} />

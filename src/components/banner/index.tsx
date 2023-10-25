@@ -11,7 +11,7 @@ export function Banner() {
       description:
         'Ofereça a mais completa solução de tecnologia do cálculo de frete até o Live tracking.',
       link: 'Saiba mais',
-      href: 'https://uxsolutions.com.br/',
+      href: 'https://uxgroup.com.br/tecnologia/',
       blocked: false,
       target: '_self',
       image: {

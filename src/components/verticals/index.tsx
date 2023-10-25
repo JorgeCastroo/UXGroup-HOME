@@ -58,21 +58,7 @@ const IMAGES = [
       'Visite o site da UX Connect para saber mais',
     ],
     color: 'Purple',
-  },
-  {
-    img: DeliveryImage,
-    logoImg: UXDeliveryLogo,
-    alt: 'UX Delivery',
-    title: 'Inovação na gestão de transportes.',
-    href: 'https://uxdelivery.com.br/',
-    description:
-      'A UX entende que o transporte pode ser um grande diferencial como etapa final deste processo. Por isso a UX investe em soluções que irão transformar a experiência de compra com tecnologia, performance e preocupação com o meio ambiente. Toda entrega UX Delivery é livre de emissão de CO².',
-    buttons: [
-      'Fale agora com um especialista em transporte',
-      'Visite o site da UX Delivery para saber mais',
-    ],
-    color: 'Red',
-  },
+  }
 ];
 
 export function Verticals() {
@@ -80,7 +66,7 @@ export function Verticals() {
   const isDesktopMedia = size.width === undefined || size.width > 1024;
   const [index, setIndex] = useState(0);
   const [touchPosition, setTouchPosition] = useState<number | null>(null);
-  const slides = [0, 1, 2, 3 ];
+  const slides = [0, 1, 2 ];
   const length = slides.length;
 
   const next = () => {
@@ -154,7 +140,7 @@ export function Verticals() {
                   index === 0 ? style.active : ''
                 }`}
               >
-                Fulfillment 
+                Fulfillment
               </button>
             </div>
             <div className={style.controlSlide}>
@@ -177,16 +163,6 @@ export function Verticals() {
                 Experiência
               </button>
             </div>
-            <div className={style.controlSlide}>
-              <button
-                onClick={() => setIndex(3)}
-                className={`${style.colorRed} ${
-                  index === 3 ? style.active : ''
-                }`}
-              >
-                Entrega
-              </button>
-            </div>
           </div>
           <button className={style.right} onClick={next}>
             <FaArrowRight />
@@ -196,7 +172,7 @@ export function Verticals() {
           className={style.slider}
           style={{
             transform: isDesktopMedia
-              ? index == 5
+              ? index == 3
                 ? 'translateX(-474%)'
                 : index < 1
                 ? `translateX(-${index * 75}%)`
@@ -230,7 +206,7 @@ export function Verticals() {
                   acessar o site
                 </a>
                 <a href="https://calendly.com/natielen-campos/ux-group-voce?month=2023-08">agende uma reunião</a>
-                
+
               </div>
             </div>
           ))}

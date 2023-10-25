@@ -5,16 +5,15 @@ import { useState } from 'react';
 
 // image imports
 import ClientsImage from '@/assets/Clientes/banner-clientes.gif';
-import ClientAlexandre from '@/assets/Clientes/alexandre.png';
+import ClientDafiti from '@/assets/Clientes/logo-dafiti-152.png';
 import ClientCarrefour from '@/assets/Clientes/carrefour.png';
-import ClientLemon from '@/assets/Clientes/LogoClientlemon.png';
 import ClientKabum from '@/assets/Clientes/kabum.png';
 import ClientLemonBasic from '@/assets/Clientes/lemon.png';
 import ClientMultimoveis from '@/assets/Clientes/mm.png';
 import ClientPetlove from '@/assets/Clientes/petlove.png';
 import ClientShopee from '@/assets/Clientes/shopee.png';
 import ClientVeste from '@/assets/Clientes/vest.png';
-import ClientSalon from '@/assets/Clientes/salon.png';
+import ClientWhirpol from '@/assets/Clientes/logo-whirpool-152.png';
 import ClientVia from '@/assets/Clientes/via-varejo.png';
 import LogoVesteClientes from '@/assets/Clientes/logo-veste-clientes.png';
 import LogoPetClientes from '@/assets/Clientes/logo-pet-cliente.png';
@@ -26,10 +25,10 @@ const IMAGES = [
   { img: ClientShopee, alt: 'Cliente Shopee' },
   { img: ClientKabum, alt: 'Cliente Kabum' },
   { img: ClientMultimoveis, alt: 'Cliente Multimoveis' },
-  { img: ClientSalon, alt: 'Cliente Salon line' },
+  { img: ClientWhirpol, alt: 'Cliente Whirpol' },
   { img: ClientVeste, alt: 'Cliente Veste' },
   { img: ClientLemonBasic, alt: 'Cliente Lemon Basic' },
-  { img: ClientAlexandre, alt: 'Cliente Alexandre' },
+  { img: ClientDafiti, alt: 'Cliente Dafiti' },
 ];
 
 const VIDEOS = [

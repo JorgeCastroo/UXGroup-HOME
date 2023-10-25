@@ -7,6 +7,7 @@ import { ContactLink } from '@/components/contact-link';
 import { UXMedia } from '@/components/ux-media';
 import { Blog } from '@/components/blog';
 import { ContactForm } from '@/components/contactForm';
+import { ContactModal } from '@/components/contactModal';
 import { Verticals } from '@/components/verticals';
 import { ESG } from '@/components/esg';
 import Script from 'next/script';
@@ -21,6 +22,40 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/*<!-- Google Tag Manager -->*/}
+        <Script id='googleManager'>
+        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5M78MWM');`}
+        </Script>
+      {/*<!-- End Google Tag Manager -->*/}
+
+      {/*<!-- Google Tag Manager (noscript) -->*/}
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-5M78MWM"
+          height="0"
+          width="0"
+          style={{ display:'none', visibility:'hidden'}}>
+        </iframe>
+      </noscript>
+      {/*<!-- End Google Tag Manager (noscript) -->*/}
+
+
+
+      {/*<!-- Google tag (gtag.js) inserido dia 11/09 -->*/}
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=AW-400476575"
+      ></Script>
+      <Script id="startgtagjs">
+        {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-400476575');`}
+      </Script>
+      {/*<!-- Google Tag Manager fim tag 11/09 -->*/}
+
       {/*<!-- Google tag (gtag.js) -->*/}
       <Script
         async
@@ -64,6 +99,7 @@ export default function Home() {
         <ContactLink />
         <Clients />
         <UXMedia />
+        <ContactModal />
         <Blog />
         <ContactForm />
       </main>

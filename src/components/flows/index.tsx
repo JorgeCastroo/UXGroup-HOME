@@ -8,7 +8,7 @@ import { useWindowSize } from '@/hooks/use-window-size';
 import PlanejamentoMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-PLANEJAMENTO-MINI.png';
 import VendasMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-VENDAS-MINI.png';
 import EntregaMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-ENTREGAS-MINI.png';
-import AnaliseMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-VENDAS-MINI.png'; 
+import AnaliseMiniImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-VENDAS-MINI.png';
 
 import PlanejamentoImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-PLANEJAMENTO.png';
 import VendasImage from '@/assets/Fluxo-Desktop/Desktop-sessao-fluxo-VENDAS.png';
@@ -277,7 +277,7 @@ export function Flows() {
               onClick={() => setCurrent(4)}
             >
               04
-            </li>  
+            </li>
           </ul>
         )}
       </div>
