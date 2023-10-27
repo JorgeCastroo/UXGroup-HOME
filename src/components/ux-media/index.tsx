@@ -11,6 +11,8 @@ import Fulfillment from '@/assets/UX-na-midia/fulfillment-por-que-interessa-aos-
 import Estrategias from '@/assets/UX-na-midia/estrategias-para-ser-diferente-aos-olhos-da-geracao-z-clientesa.png';
 import Amazon from '@/assets/UX-na-midia/ux-group-sela-acordo-com-amazon-para-integrar-o-grupo-de-parceiros-spn - mundo-do-marketing.png';
 import Gestao from '@/assets/UX-na-midia/ux-group-desenvolve-sistema-de-gestao-de-parceiros-e-aprimora-operacionalizacao-das-entregas.png';
+import ImageCaio from '@/assets/UX-na-midia/ImageCaio.jpg';
+import ImageOndetah from '@/assets/UX-na-midia/imageOndetah.png';
 import {useEffect, useRef} from "react";
 
 export function UXMedia() {
@@ -44,6 +46,46 @@ export function UXMedia() {
         </div>
         <div className={style.galery}>
           <div className={style.cards} ref={scrollRef}>
+            <a
+              className={style.card}
+              href="https://portal.clientesa.com.br/cliente-sa/os-influencers-como-nicho-promissor-para-o-fulfillment/"
+              target="_blank"
+            >
+              <div className={style.img}>
+                <Image
+                  src={ImageCaio}
+                  width={248}
+                  height={126}
+                  alt="Placement Area"
+                />
+              </div>
+              <div className={style.content}>
+                <h3 className={style.title}>
+                  Os influencers como nicho promissor para o fulfillment
+                </h3>
+                <span>Acessar &gt;</span>
+              </div>
+            </a>
+            <a
+              className={style.card}
+              href="https://mundologistica.com.br/noticias/dafiti-firma-parceria-com-ux-group-para-automatizar-operacoes-logisticas"
+              target="_blank"
+            >
+              <div className={style.img}>
+                <Image
+                  src={ImageOndetah}
+                  width={248}
+                  height={126}
+                  alt="Placement Area"
+                />
+              </div>
+              <div className={style.content}>
+                <h3 className={style.title}>
+                  Dafiti firma parceria com UX Group para automatizar operações logísticas
+                </h3>
+                <span>Acessar &gt;</span>
+              </div>
+            </a>
             <a
               className={style.card}
               href="https://www.ecommercebrasil.com.br/artigos/inteligencia-operacional-e-seus-impactos-na-performance-logistica"

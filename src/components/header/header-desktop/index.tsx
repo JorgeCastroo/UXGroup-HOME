@@ -62,6 +62,13 @@ export function HeaderDesktop() {
                 </button>
               </li>
               <li>
+                <Link
+                  href="https://uxgroup.com.br/tecnologia/"
+                  target='_blank'>
+                  TECNOLOGIA
+                </Link>
+              </li>
+              <li>
                 <Link href="/#esg">
                   PROGRAMA ESG
                 </Link>

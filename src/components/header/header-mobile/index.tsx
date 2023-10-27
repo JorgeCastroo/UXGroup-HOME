@@ -84,6 +84,11 @@ export function HeaderMobile() {
                 </button>
               </li>
               <li>
+                <Link target='_blank' href="https://uxgroup.com.br/tecnologia/">
+                  TECNOLOGIA
+                </Link>
+              </li>
+              <li>
                 <Link href="/#esg">
                   PROGRAMA ESG
                 </Link>
