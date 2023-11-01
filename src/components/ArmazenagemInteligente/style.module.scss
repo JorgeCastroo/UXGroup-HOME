@@ -1,0 +1,325 @@
+.container {
+    * {
+        color: var(--font-primary-color);
+    }
+
+    .containerBox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 83vh;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        background-color: #000;
+
+        .contentImageBox {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-areas: "text image";
+            width: 90%;
+            max-width: 1440px;
+
+            .contentText {
+                display: flex;
+                grid-area: text;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                gap: 2%;
+
+                .imageMobile{
+                    display: none;
+                }
+
+                .titleArmazenagemInteligente {
+                    line-height: 100%;
+                    font-size: 2.7rem;
+                }
+
+                .subtitleArmazenagemInteligente {
+                    width: 95%;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    padding-bottom: 5px;
+                }
+
+                .boxButtonsArmazenagem {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 100%;
+
+                    .buttonArmazenagem {
+                        margin: 0.5%;
+                        border-radius: 100px;
+                        border: none;
+                        color: #000;
+                        background-color: #FAD303;
+                        padding: 1.5%;
+                        width: 28%;
+                        font-weight: 500;
+                        cursor: pointer; /* Adicionado cursor ao estilo do botão */
+                    }
+
+                    .buttonArmazenagem:hover {
+                        background-color: #FFF;
+                        transition: 0.3s;
+                    }
+                }
+            }
+            .contentImage {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                grid-area: image;
+                width: 100%;
+                height: 100%;
+    
+                .imageBannerArmazenagem {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .modalBackdrop {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        width: 75%;
+        height: 80vh; 
+        overflow-y: auto; 
+        z-index: 1000;
+        top: 10vh; 
+        left: 12.5%; 
+
+        .modal{
+            display: grid;
+            grid-template-areas: "image content";
+            grid-template-columns: 43% 57%;
+            width: 90%;
+            height: 80%;
+            align-items: center;
+
+            .imageModalBox{
+                grid-area: image;
+                width: 100%;
+                height: 100%;
+                border: 15px solid #FFF;
+
+                .imageModal{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .customModal{
+                display: flex;
+                align-items: center;
+                padding: 5%;
+                width: 100%;
+                height: 80%;
+                background-color: #000;
+                margin-left: -10%;
+
+                .contentTextModal{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    width: 100%;
+
+                    .titleMinModal{
+                        font-size: 0.9rem ;
+                    }
+
+                    .titleModal{
+                        font-size: 2.25rem;
+                    }
+
+                    .textModal{
+                        font-weight: 600;
+                        font-size: 0.9rem;
+                        width: 85%;
+                    }
+
+                    .buttonModal{
+                        background-color: #FAD303;
+                        border: none;
+                        padding: 2%;
+                        border-radius: 100px;
+                        color: #000;
+                        width:50%;  
+                        font-weight: 500;
+                    }
+                    .buttonModal:hover{
+                        font-weight: 500;
+                        background-color: #FFF;
+                        transition: 0.3s;
+                    }
+
+                    .navModal{
+                        display: flex;
+                        align-items: center;
+                        gap: 30%;
+                        margin-top: 3%;
+
+                        .arrows{
+                            align-items: center;
+                            justify-content: center;
+                            font-size: 2rem;
+                            gap: 2px;
+                        }
+                    }
+
+                    .closeModal{
+                        display: flex;
+                        justify-content: flex-end;
+                        font-size: 2rem;
+                        width: 93%;
+                    }
+                    
+                    
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .containerBox {
+            height: auto;
+    
+            .contentImageBox{
+                display: flex;
+                flex-direction: column;
+                width: 80%;
+                padding-top: 10%;
+                padding-bottom: 10%;
+
+                .contentText{
+                    display: flex;
+                    width: 100%;
+                    gap: 15px;
+
+                    .imageMobile{
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .titleArmazenagemInteligente{
+                        font-size:2.2rem;
+                    }
+
+                    .subtitleArmazenagemInteligente{
+                        font-size: 0.8rem;
+                    }
+
+
+                    .boxButtonsArmazenagem{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+
+                        .buttonArmazenagem{
+                            width: 100%;
+                            padding: 3%;
+                        }
+                    }
+                }
+
+                .contentImage{
+
+                    .imageBannerArmazenagem{
+                        display: none;
+                    }
+               }
+            }
+        }
+
+        .modalBackdrop{
+            height: 100%;
+            width: 100%;
+            left: 0%;
+            background-color: #000;
+
+            .modal{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                width: 80%;
+                height: 500px;
+
+                .customModal{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-left: 0%;
+
+                    .contentTextModal{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 5px;
+                        height: 100%;
+
+                        .iconTitle{
+                            display: flex;
+                            flex-direction: column;
+                        }
+
+                        .closeModal{
+                            font-size: 1.6rem;
+                        }
+                        .titleModal{
+                            font-size: 1.3rem;
+                            text-align: center;
+                        }
+                        .textModal{
+                            text-align: center;
+                            font-size: 0.7rem
+                        }
+                        .buttonModal{
+                            font-size: 0.9rem;
+                            width: 100px;
+                        }
+                        .navModal{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+                            .arrows{
+                                font-size: 1.6rem;
+                            }
+
+                            .buttonModal{
+                                font-size: 0.7rem;
+                                width: 120%;
+                                padding: 8px;
+                            }
+                        }
+                    }
+                }
+
+                .imageModalBox{
+                    border: 5px solid #FFF;
+                    max-height: 50%;
+                    width: 90%;
+                    margin-top: -10px;
+
+                    .imageModal{
+                        
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+

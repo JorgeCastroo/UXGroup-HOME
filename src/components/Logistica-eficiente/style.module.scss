@@ -1,0 +1,182 @@
+.container {
+    * {
+        color: var(--font-primary-color);
+    }
+
+    .Logisticabox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 120vh;
+        padding-top: 5%;
+        padding-bottom: 5%;
+
+        .controller{
+            display: none;
+        }
+
+        .logisticaBoxTextImage {
+            display: grid;
+            grid-template-areas: "text image";
+            grid-template-columns: 50% 50%;
+            width: 90%;
+            max-width: 1440px;
+
+            
+
+            .textBoxLogisticaEficiente {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                gap: 10px;
+                grid-area: text;
+                height: 100%;
+                width: 100%;
+
+                .titleLogisticaEficiente {
+                    font-size: 2.35rem;
+                    color: #000;
+                    line-height: 100%;
+                }
+
+                .subTitleLogisticaEficiente {
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    line-height: 110%;
+                    padding-bottom: 3px;
+                    color: #Fad303;
+                }
+
+                .textLogisticaEficiente {
+                    font-size: 0.9rem;
+                    color: #000;
+                }
+            } 
+
+            .imageBoxLogisticaEficiente {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+
+                .imageLogisticaEficiente {
+                    display: flex;
+                    width: 70%;
+                }
+            
+            }
+        }
+
+        .indicadoresBox {
+            display: flex;
+            justify-content: center;
+            height: 40%;
+            width:90%;
+            max-width: 1440px;
+
+            .indicadoresBoxOne {
+                display: flex;
+                justify-content: center;
+                gap: 1%;
+                width: 100%;
+                flex-wrap: wrap;
+
+                .indicador {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+                    width: 32.5%;
+
+                    .titleIndicador {
+                        font-size: 3rem;
+                        color: #Fad303;
+                    }
+
+                    .textIndicador {
+                        font-size: 0.9rem;
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            height: auto;
+        }
+
+        .Logisticabox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15%;
+            padding-bottom: 15%;
+            min-height: 300vh;
+            padding-left: 5%;
+            padding-right: 5%;
+            
+
+            .logisticaBoxTextImage {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                min-height: auto;
+
+                .textBoxLogisticaEficiente {
+                    .titleLogisticaEficiente {
+                        font-size: 2rem;
+                        line-height: 44px;
+                    }
+    
+                    .subTitleLogisticaEficiente {
+                        font-size: 1.2rem;
+                        line-height: 120%;
+                    }
+    
+                    .textLogisticaEficiente {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                .imageBoxLogisticaEficiente {
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 5%;
+    
+                    .imageLogisticaEficiente {
+                        display: flex;
+                        width: 100%;
+                        
+                    }
+                }
+            }
+            .indicadoresBox {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                max-width: 90%;
+
+                .indicadoresBoxOne {
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    width: 100%;
+                    height: 100%;
+
+                    .indicador {
+                        width: 100%;
+                        height: 20%;
+                    }
+                }
+            }
+        }
+    }
+}

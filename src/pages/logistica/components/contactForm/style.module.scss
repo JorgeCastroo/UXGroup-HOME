@@ -1,0 +1,277 @@
+.container {
+    padding-bottom: 80px;
+    background-color: var(--background-primary-color);
+  
+    * {
+      color: var(--font-primary-color);
+    }
+  
+    .titleBlock {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 36px;
+      gap: 20px;
+  
+      .title {
+        margin-top: 80px;
+        max-width: 321px;
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 44px;
+        text-align: center;
+      }
+      .subtitle {
+        max-width: 321px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: 0px;
+        text-align: center;
+        margin-bottom: 56px;
+      }
+  
+      @media screen and (min-width: 768px) {
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        margin: 0 auto;
+  
+        .title,
+        .subtitle {
+          max-width: 100%;
+        }
+      }
+  
+      @media screen and (min-width: 1024px) {
+        .title {
+          line-height: 56px;
+        }
+      }
+    }
+  
+    .containerForm {
+      max-width: 580px;
+      margin: 0 auto;
+  
+      form {
+        width: 80%;
+        margin: 0 auto;
+  
+        @media screen and (min-width: 768px) {
+          width: 100%;
+        }
+      }
+  
+      input {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 0.5rem 1rem;
+        height: 2rem;
+        font-size: 14px;
+        background: transparent;
+        border: 1px solid #ffffff;
+        color: var(--font-primary-color);
+      }
+      ::placeholder {
+        color: var(--font-primary-color);
+      }
+      .contentForm {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+  
+        @media screen and (min-width: 768px) {
+          .containerGrid {
+            width: 100%;
+            display: grid;
+            grid-template-rows: 30px 10px;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            grid-template-areas:
+              'item1 item1'
+              'item2 item3'
+              'item4 item5'
+              'item6 item7';
+          }
+  
+          .item1 {
+            grid-area: item1;
+          }
+        }
+      }
+  
+      .contentFormComercial {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+  
+        &.active {
+          display: flex;
+        }
+  
+        @media screen and (min-width: 768px) {
+          .containerGrid {
+            width: 100%;
+            display: grid;
+            grid-template-rows: 30px 10px;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            grid-template-areas:
+              'item1 item1'
+              'item2 item3'
+              'item4 item5'
+              'item6 item7';
+          }
+  
+          .item1 {
+            grid-area: item1;
+          }
+        }
+      }
+  
+      .contentFormParceria {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+  
+        &.active {
+          display: flex;
+        }
+  
+        @media screen and (min-width: 768px) {
+          .containerGrid {
+            width: 100%;
+            display: grid;
+            grid-template-rows: 30px 10px;
+            gap: 0.5rem;
+            margin-bottom: 3rem;
+            grid-template-areas:
+              'item1 item2'
+              'item3 item3';
+          }
+  
+          .item3 {
+            grid-area: item3;
+          }
+        }
+      }
+      .toggleOptions {
+        display: flex;
+        flex-direction: column;
+        label {
+          flex: 1;
+          font-size: 14px;
+        }
+  
+        .radios {
+          margin-top: 0.5rem;
+          display: flex;
+          gap: 5px;
+          .radioButton {
+            width: 158px;
+            height: 40px;
+            text-align: center;
+            font: normal normal normal 16px/25px;
+            letter-spacing: 0px;
+            border: none;
+            border-radius: 200px;
+            margin-bottom: 24px;
+            transition: background-color 0.5s;
+            cursor: pointer;
+  
+            &.active {
+              border: 1px solid var(--font-primary-color);
+              color: var(--font-primary-color);
+              background-color: var(--background-primary-color);
+            }
+  
+            &:hover {
+              border: 1px solid var(--font-primary-color);
+              color: var(--font-primary-color);
+              background-color: var(--background-primary-color);
+            }
+          }
+        }
+  
+        @media screen and (min-width: 768px) {
+          align-items: flex-start;
+        }
+      }
+      select {
+        border: 1px solid #ffffff;
+        background: transparent 0% 0% no-repeat padding-box;
+        width: 100%;
+        height: 2.5rem;
+        margin: 0.5rem 0;
+        padding: 0.5rem 0.75rem;
+        font-size: 14px;
+  
+        @media screen and (min-width: 768px) {
+          padding: 0 0.75rem;
+          height: 2rem;
+        }
+      }
+  
+      textarea {
+        resize: none;
+        border: 1px solid #ffffff;
+        width: 100%;
+        background: transparent 0% 0% no-repeat padding-box;
+        padding: 0.5rem 1rem;
+      }
+  
+      input[type='checkbox'] {
+        width: 1rem;
+      }
+  
+      .btnSubmit {
+        display: none;
+        justify-content: center;
+  
+        &.active {
+          display: flex;
+        }
+  
+        button {
+          width: 321px;
+          height: 40px;
+          margin: 1rem 0;
+          box-shadow: 0px 3px 6px #00000029;
+          border: none;
+          border-radius: 200px;
+          font-size: 1rem;
+          transition: background-color 0.5s;
+          cursor: pointer;
+  
+          &:hover {
+            border: 1px solid var(--font-primary-color);
+            color: var(--font-primary-color);
+            background-color: var(--background-primary-color);
+          }
+        }
+  
+        @media screen and (min-width: 768px) {
+          justify-content: end;
+  
+          button {
+            width: 264px;
+          }
+        }
+      }
+  
+      .checkboxOptions {
+        font-weight: 200;
+        font-size: 14px;
+  
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+    }
+  
+    button {
+      color: var(--font-secondary-color);
+      background-color: var(--background-secondary-color);
+    }
+  }
+  

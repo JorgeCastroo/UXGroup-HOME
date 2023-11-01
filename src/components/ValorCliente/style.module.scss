@@ -1,0 +1,174 @@
+.container {
+    * {
+        color: var(--font-primary-color);
+    }
+
+    .containerBox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        padding-top: 5%;
+
+
+        .ImageText{
+            display: grid;
+            grid-template-columns: 55% 45%;
+            grid-template-areas: "text image";
+            width: 90%;
+            max-width: 1440px;
+
+            .textContent{
+                display: flex;
+                flex-direction: column;
+                grid-area: text;
+                justify-content: center;
+                gap: 10px;
+
+                .titleValorCliente{
+                    color: #000;
+                    font-size: 2.25rem;
+                    line-height: 110%;
+                }
+                
+                .subTitleValorCliente{
+                    font-size: 1.3rem;
+                    color:#fad205;
+                    width: 80%;
+                    padding-bottom: 1%;
+                }
+
+                .iconText{
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding-bottom: 2%;
+
+                    h3{
+                        display: flex;
+                        align-items: center;
+                        
+                    }
+
+                    h3 > svg{
+                        font-size: 1.5rem;
+                        fill: #fad205;
+                    }
+                    
+                    .textItem {
+                        color: #000;
+                    }
+                }
+
+                .buttonValorCliente{
+                    width: 40%;
+                    button{
+                        width: 100%;
+                        background-color: #fad205;
+                        border-radius: 100px;
+                        padding: 5%;
+                        border: 1px solid #fad205;
+                        color: #000;
+                        font-size: 0.9rem;
+                        font-weight: 500;
+                    }
+                    button:hover{
+                        background-color: #000;
+                        color: #FFF;
+                        border: 1px solid #FFF;
+                        transition: 0.3s;
+                    }
+                }
+            }
+
+            .ImageContent{
+                display: flex;
+                grid-area: image;
+                width: 100%;
+
+                .controllerImage{
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    @media (max-width: 768px) {
+        .containerBox {
+            padding-top: 5%;
+            padding-bottom: 0%;
+            justify-content: flex-end;
+            height: 95vh;
+
+            .ImageText{
+                display: flex;
+                flex-direction: column;
+                padding-left: 5%;
+                padding-right: 5%;
+
+                .textContent{
+                    display: flex;
+                    flex-direction: column;
+                    grid-area: text;
+                    justify-content: center;
+                    gap: 10px;
+    
+                    .titleValorCliente{
+                        color: #000;
+                        font-size: 2.25rem;
+                        line-height: 110%;
+                    }
+                    
+                    .subTitleValorCliente{
+                        font-size: 1.2rem;
+                        color:#fad205;
+                        width: 100%;
+                        line-height: 110%;
+                        padding-bottom: 1%;
+                    }
+    
+                    .iconText{
+                        display: flex;
+                        align-items: center;
+                        fill: #fad205;
+    
+                        h3 > svg{
+                            fill: #fad205;
+                        }
+                        .textItem {
+                            color: #000;
+                        }
+                    }
+                    .buttonValorCliente{
+                        width: 100%;
+                    }
+                }
+            }
+            .ImageContent{
+                display: flex;
+                grid-area: image;
+                width: 100%;
+                height: 100%;
+
+                .controllerImage{
+                    display: flex;
+                    align-items: flex-end;
+                    height: 100%;
+                    width: 100%;
+
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

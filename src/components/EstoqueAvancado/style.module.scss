@@ -1,0 +1,189 @@
+.container {
+    * {
+        color: var(--font-primary-color);
+    }
+
+    .containerBox {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 120vh;
+        padding-top: 7%;
+        padding-bottom: 7%;
+
+        .boxTitle{
+            display: flex;
+            padding-bottom: 4%;
+
+            .titleEstoqueAvancado{
+                font-size: 2.25rem;
+                color: #000;
+            }
+        }
+
+        .textImageText{
+            display: grid;
+            align-content: center;
+            justify-items: center;
+            grid-template-columns: 20% 60% 20%;
+            grid-template-areas: "listOne image listTwo";
+            width: 90%;
+            max-width: 1440px;
+
+            .imageMobile{
+                display: none;
+            }
+
+            .listOne{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                grid-area: listOne;
+                width: 100%;
+                height: 100%;
+                gap:25px;
+
+                .itemList{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .titleItemList{
+                        font-size: 1.1rem;
+                        color: #FAD303;
+                    }
+
+                    .textItemList{
+                        font-size: 0.8rem;
+                        color: #000;
+                    }
+                }
+            }
+            .listTwo{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                grid-area: listTwo;
+                width: 100%;
+                height: 100%;
+                gap:25px;
+
+                .itemList{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+
+                    .titleItemList{
+                        font-size: 1.1rem;
+                        color: #FAD303;
+                    }
+
+                    .textItemList{
+                        font-size: 0.8rem;
+                        color: #000;
+                    }
+                }
+            }
+        }
+
+        .imageBox{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 75%;
+            height: 100%;
+
+            .imageEstoque{
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .boxButtonEstoqueAvancado{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+        
+            a{  
+                display: flex;
+                text-decoration: none;
+                justify-content: center;
+                width: 100%;
+            }
+            .ButtonEstoqueAvancado{
+                width: 25%;
+                padding: 1%;
+                border: 0px solid transparent;
+                border-radius: 100px;
+                background-color: #FAD303;
+                color: #000;
+                font-weight: 500;
+                border: 1px solid #00000000;
+                font-size: 0.9rem;
+            }
+            .ButtonEstoqueAvancado:hover{
+                background-color: #000000;
+                border: 1px solid #ffffff;
+                transition: 0.3s;
+                color: #FFF;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+            .containerBox {
+                height: auto;
+                padding-top: 15%;
+                padding-bottom: 15%;
+
+                .boxTitle{
+                    width: 80%;
+
+                    .titleEstoqueAvancado{
+                        font-size:1.8rem;
+                        line-height: 100%;
+                    }
+                }
+
+                .textImageText{
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+
+                    .imageMobile{
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        padding-bottom: 20px;
+                    }
+                    
+                    .listOne{
+                        gap: 10px;
+                        margin-bottom: 10px;
+                    }
+                    .listTwo{
+                        gap: 10px;
+
+                    }
+                }
+
+                .imageBox{
+                    
+                    .imageEstoque{
+                        display: none;
+                    }
+                }
+
+                .boxButtonEstoqueAvancado{
+                    .ButtonEstoqueAvancado{
+                        width: 80%;
+                        padding: 3%;
+                    }
+                }
+            }
+        }
+}
